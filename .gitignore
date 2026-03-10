@@ -1,10 +1,18 @@
 
-data/
+# Data (images are large; keep directory structure via .gitkeep)
+data/input_images/*
+!data/input_images/.gitkeep
+data/output_images/*
+!data/output_images/.gitkeep
+
+# Logs
+logs/
+
+# Python
 __pycache__/
 *.pyc
 .env
 venv/
-
 
 # OS
 .DS_Store
