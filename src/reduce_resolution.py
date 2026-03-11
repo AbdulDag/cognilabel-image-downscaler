@@ -24,14 +24,9 @@ from pathlib import Path
 
 from PIL import Image, ImageFile
 
-# ---------------------------------------------------------------------------
-# Safety: allow Pillow to open very large images without a DecompressionBomb
-# warning, and tolerate truncated files gracefully.
-# ---------------------------------------------------------------------------
 Image.MAX_IMAGE_PIXELS = None
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
-# Supported extensions (case-insensitive check performed at runtime)
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".tiff", ".tif"}
 
 # Scale factor: 1 / √10  (reduces area by 10×)
